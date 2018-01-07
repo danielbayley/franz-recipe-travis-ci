@@ -11,7 +11,7 @@
   "id": "travis-ci",
   "devDependencies": {
     "svg2png": "^4.1.1",
-    "svgo": "^1.0.2"
+    "svgcleaner": "^0.8.1-1"
   },
   "config": {
     "dev": "Library/Application Support/Franz/recipes/dev/travis-ci",
@@ -20,8 +20,8 @@
     "serviceURL": "https://travis-ci.org/{teamId}"
   },
   "scripts": {
-    "svg2png": "svg2png -w 1024 -h 1024 icon.{svg,png}",
-    "svgo": "svgo --multipass icon.svg",
+    "svg2png": "svg2png -w 1024 -h 1024 icon.{sv,pn}g",
+    "svgcleaner": "svgcleaner --multipass icon.svg{,}",
     "test": "ln -s \"$PWD\" \"$HOME/$npm_package_config_dev\"",
     "unlink": "rm \"$HOME/$npm_package_config_dev\""
   }
